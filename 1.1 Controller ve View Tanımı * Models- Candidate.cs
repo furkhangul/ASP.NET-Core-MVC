@@ -1,5 +1,4 @@
 namespace Basic.Models
-
 {
     public class Candidate
     {
