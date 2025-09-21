@@ -1,0 +1,23 @@
+@model List<App>
+
+<div class="display-3">
+Users Page
+</div>
+<hr>
+<div class="main">
+    @foreach(App lis in Model){
+    <h6>
+    @lis.FullName
+    </h6>
+    <p>
+    Id: @lis.id
+    </p>
+    <p>
+    Age: @lis.Age
+    </p>
+    <p>
+    Departmant: @lis.Departmant
+    </p>
+    <hr />
+    }
+</div>
