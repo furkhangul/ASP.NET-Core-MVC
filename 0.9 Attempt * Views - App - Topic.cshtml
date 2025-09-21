@@ -1,0 +1,13 @@
+@model string[]
+
+<div class="content">
+    <div class="display-3">
+        Topic Page
+    </div>
+    <hr>
+    @foreach(string topic in Model){
+        <h5>
+            @topic
+        </h5>
+    }
+</div>
