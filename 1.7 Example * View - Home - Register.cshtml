@@ -1,0 +1,49 @@
+<div class="display-3"> Register Page
+</div>
+
+<hr />
+
+<form method="post">
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" name="Email" id="Email" class="form-control" required>
+        <div class="form-text" id="Email">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="FirstName" class="form-label">First Name</label>
+        <input type="text" name="FirstName" id="FirstName" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label for="LastName" class="form-label">Last Name</label>
+        <input type="text" name="LastName" id="LastName" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="Username" class="form-label">Username</label>
+        <input type="text" name="Username" id="Username" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input type="password" name="Password" id="Password" class="form-control">
+    </div>
+    <br />
+    <a  class="back" asp-controller="Home" asp-action="Index">Home Page</a>
+    <button  type="submit" class="btn btn-primary">Register</button>
+    <br>
+    <br />
+</form>
+
+<style>
+.btn{
+    float:right;
+    font-size: 20px;
+}
+.back{
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid;
+    padding:5px;
+    font-size: 20px;
+    float: left;
+}
+
+</style>
