@@ -1,5 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
 //MVC İÇİN GEREKLİ VİEWS,CONTROLLERS VE MODEL YAPISINI İMPORT ETTİK
 //Bu 3 klasörü kendimiz elle ekliyoruz.
 builder.Services.AddControllersWithViews();
