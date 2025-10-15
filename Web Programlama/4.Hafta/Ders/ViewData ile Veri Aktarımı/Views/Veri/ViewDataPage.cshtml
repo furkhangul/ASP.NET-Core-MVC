@@ -1,0 +1,29 @@
+<!--Basic adlı dosyamın Model altındaki alanları içeri aktarıyorum-->
+@using Basic.Models;
+@{
+  /*
+  View bir dictionarydir yani anahtar değer ile veri taşımaktadır. : ViewData["anahtar"] = değer;
+  içeriği ise object şeklinde taşımaktadır. ve bu yöntem view'a geçici veri iletmek için kullanılır. 
+  Controller ➝ View).
+
+  ViewDatadan aldığımız veri object şeklinde geldiğini biliyoruz ve bu nesne Model->User.cs de saklanan User sınıfından 
+  geldiğini de biliyoruz bundan dolayı tür dönüşümü yapmaya çalışırız. 
+
+  Burada ViewData'dan gelen object türündeki veriyi, User sınıfına dönüştür ve u değişkenine ata şeklinde komut gireriz.
+  Eşittir 
+  User sınıfından türetilmiş ViewData olan ekle bölümünü getir demekteyiz.
+
+  ViewData["ekle"] → object türünde olduğu için, doğrudan .UserName gibi bir özelliğine erişemeyiz.
+  */
+  User u = (User)ViewData["ekle"];
+}
+
+<div class="display-5">ViewBag</div>
+<hr />
+<ul>
+  <li>@u.UserId</li>
+  <li>@u.UserName</li>
+  <li>@u.UserEmail</li>
+  <li>@u.UserPassword</li>
+
+</ul>
