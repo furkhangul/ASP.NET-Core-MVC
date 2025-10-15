@@ -1,4 +1,4 @@
-**ViewData:
+*ViewData:
 
     ViewData, küçük ve geçici verileri taşımak için kullanılan bir yapıdır.
     ViewBag’e çok benzer; ikisi de Controller’dan View’a veri göndermek için kullanılır.
@@ -9,7 +9,7 @@
     Ayrıca ViewData kullanırken bazen veriyi doğru türde kullanmak için tip dönüşümü (cast) yapılması gerekir.
     Bu yüzden dikkatli kullanılması gerekir. Küçük, hızlı ve basit bilgileri taşımak için uygundur.
 
-Model, ViewBag ve ViewData:
+*Model, ViewBag ve ViewData:
 
     Model, asıl verilerin tutulduğu yer yani oyuncak kutusu olarak düşünebiliriz.
     Bütün veriler bu oyuncak kutusunun içinde bilgileriyle birlikte saklanır.
