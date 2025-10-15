@@ -1,0 +1,22 @@
+@model User
+
+<div class="display-4">Model ile veri gönderimi</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">User</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>@Model.UserId</td>
+        <td>@Model.UserName</td>
+        <td>@Model.UserEmail</td>
+        <td>@Model.UserPassword</td>
+    </tr>
+  </tbody>
+</table>
