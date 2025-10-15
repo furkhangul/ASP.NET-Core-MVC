@@ -1,0 +1,103 @@
+@using Basic.Models;
+@model List<User>
+
+<div class="display-4">Model ile Veri Gönderme</div>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">User</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var bilgi in Model){
+        <tr>
+            <td scope="col">@bilgi.UserId</td>
+            <td scope="col">@bilgi.UserName</td>
+            <td scope="col">@bilgi.UserEmail</td>
+            <td scope="col">@bilgi.UserPassword</td>
+           
+        </tr>
+    }
+  </tbody>
+</table>
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<div class="display-4">ViewBag ile Veri Gönderme</div>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">User</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var bilgi in ViewBag.User){
+        <tr>
+            <td scope="col">@bilgi.UserId</td>
+            <td scope="col">@bilgi.UserName</td>
+            <td scope="col">@bilgi.UserEmail</td>
+            <td scope="col">@bilgi.UserPassword</td>
+           
+        </tr>
+    }
+  </tbody>
+</table>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<div class="display-4">ViewData ile Veri Gönderme</div>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">User</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var bilgi in (List<User>)ViewData["kullanici"]){
+        <tr>
+            <td scope="col">@bilgi.UserId</td>
+            <td scope="col">@bilgi.UserName</td>
+            <td scope="col">@bilgi.UserEmail</td>
+            <td scope="col">@bilgi.UserPassword</td>
+           
+        </tr>
+    }
+  </tbody>
+</table>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<div class="display-4">TempData ile Veri Gönderme</div>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">User</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var bilgi in (List<User>)TempData["kullanici"]){
+        <tr>
+            <td scope="col">@bilgi.UserId</td>
+            <td scope="col">@bilgi.UserName</td>
+            <td scope="col">@bilgi.UserEmail</td>
+            <td scope="col">@bilgi.UserPassword</td>
+           
+        </tr>
+    }
+  </tbody>
+</table>
