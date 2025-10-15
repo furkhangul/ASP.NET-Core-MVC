@@ -1,0 +1,8 @@
+@model List<String>
+<div class="display-5">Öğrencilerin Listesi</div>
+<br>
+<ul>
+    @foreach(string Ogrenci in Model){
+        <li>@Ogrenci</li>
+    }
+</ul>
