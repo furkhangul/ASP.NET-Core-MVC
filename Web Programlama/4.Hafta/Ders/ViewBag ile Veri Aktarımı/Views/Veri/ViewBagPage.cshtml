@@ -1,0 +1,17 @@
+<!--Burada model içerisinde kayıt ettiğimiz verileri çekmek için modeli çağırıyoruz-->
+@using Basic.Models;
+
+@{
+  //Sadeleştirmek için bu bölümü kullanıyoruz.
+  User ekle = (User)ViewBag.User;
+}
+
+<div class="display-5">ViewBag</div>
+<hr />
+<ul>
+  <li>@ekle.UserId</li>
+  <li>@ekle.UserName</li>
+  <li>@ekle.UserEmail</li>
+  <li>@ekle.UserPassword</li>
+
+</ul>
