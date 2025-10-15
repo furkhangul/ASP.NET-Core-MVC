@@ -1,0 +1,16 @@
+
+@using Basic.Models;
+@{
+  //Neden bu şekilde kullanıldığı ViewData kısmında güzel bir şekilde açıklandı.
+  User u = (User)TempData["yeni"];
+}
+
+<div class="display-5">TempData</div>
+<hr />
+<ul>
+  <li>@u.UserId</li>
+  <li>@u.UserName</li>
+  <li>@u.UserEmail</li>
+  <li>@u.UserPassword</li>
+
+</ul>
