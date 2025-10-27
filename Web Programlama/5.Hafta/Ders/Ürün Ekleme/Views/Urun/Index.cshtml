@@ -1,0 +1,63 @@
+@model List<Basic.Models.UrunView>
+
+<div class="display-3" style="color:black; text-align:center;font-size:30px; font-widtht:50;margin:20px; padding20px;">Ürünler</div>
+
+
+<center>
+
+<a class="butn" href="@Url.Action("Index","Home")">Ana Sayfa</a>
+<a class="butn" href="@Url.Action("Index","Home")">Hakkımda</a>
+<a class="butn" href="@Url.Action("Ekle","Urun")">Ürün Ekle</a>
+<a class="butn" href="@Url.Action("Index","Urun")">Ürünler</a>
+
+<br /><br /><br />
+</center>
+<center>
+<table border="1px" width="1000">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>İsim</th>
+            <th>Açıklama</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+        </tr>
+    </thead>
+    <tbody style="text-align:center;">
+            @foreach(var urun in Model){
+            <tr>
+                <td>@urun.ID</td>
+                <td>@urun.Name</td>
+                <td>@urun.Description</td>
+                <td>@urun.Price</td>
+                <td>@if(@urun.Stock){
+                    <p>Mevcut</p>
+                    }
+                    else{
+                    <p>Mevcut değil</p>  }</td>
+            </tr>
+        }
+    </tbody>
+</table></center>
+
+<style>
+.butn{
+    color:black;
+    border: 2px solid white;
+    text-decoration:none;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+.butn:hover{
+    color:white;
+    border: 2px solid blue;
+
+}
+.butn:active{
+    color:white;
+    border: 2px solid red;
+}
+
+</style>
