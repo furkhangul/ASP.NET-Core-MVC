@@ -1,0 +1,12 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Hafta6.Models.Data
+<div class="display-6">Kullanıcı Düzenleme Sayfası</div>
+<br>
+<hr />
+<form asp-action="Duzenle" asp-controller="User" method="post">
+    <input type="number" placeholder="Kullanıcı ID" class="form-control" asp-for="Id" /><br />
+    <input type="text" placeholder="Email Adresi" class="form-control" asp-for="Email" /><br />
+    <input type="text" placeholder="Kullanıcı Adı" class="form-control"  asp-for="Username" /><br />
+    <input type="text" placeholder="Şifre" class="form-control"  asp-for="Password"/><br />
+    <input type="submit" class="btn btn-primary" value="Kullanıcı Ekle">
+</form>
