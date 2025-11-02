@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="margin:30px">FurOfTheWeak Forum Page</h1>
+    <a class="neon" href="@Url.Action("List","Users")">User List</a>
+</div>  
+
+<style>
+
+.neon{
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+    font-weight: 60px;
+    margin:30px;
+    padding:10px;
+    border: 2px solid blue;
+}
+.neon:hover{
+    border: 5px double blue;
+    color:blue;
+}
+
+</style>
