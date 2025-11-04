@@ -1,0 +1,29 @@
+@model (Basic.Models.UserData user , Basic.Models.ProductData product)
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h3>User Info</h3>
+<p>User ID: @Model.user.Id</p>
+<p>User Name: @Model.user.Name</p>
+<p>User Department: @Model.user.Department</p>
+<h3>Product Info</h3>
+<p>Product IDSN: @Model.product.IDSN</p>
+<p>Product Name: @Model.product.Name</p>
+<p>Product Price: @Model.product.Price</p>
+s
+<br />
+<br />
+<hr />
+<h1><center>Design</center></h1>
+<center>
+<form asp-action="Tupple" asp-controller="Home" method="post">
+<input type="text" asp-for="user.Id" placeholder="User ID" /><br /><br />
+<input type="text" asp-for="user.Name" placeholder="User Name" /><br /><br />
+<input type="text" asp-for="user.Department" placeholder="User Department" /><br /><br />
+<input type="text" asp-for="product.IDSN" placeholder="Product IDSN" /><br /><br />
+<input type="text" asp-for="product.Name" placeholder="Product Name" /><br /><br />
+<input type="text" asp-for="product.Price" placeholder="Product Price" /><br /><br />
+<input type="submit" value="Send" />
+</form>
+</center>
+
+
