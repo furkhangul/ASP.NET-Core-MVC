@@ -1,0 +1,16 @@
+@model Basic.Models.Users
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<form asp-controller="User" asp-action="SignUp" method="post">
+    <label>ID Number</label>
+    <input type="text" asp-for="Id"  placeholder="National Number" class="form-control" required /><br />
+    <label>Email Adress</label>
+    <input type="text" asp-for="Email"  placeholder="Email Adress" class="form-control" required/><br />
+    <label >Username</label>
+    <input type="text" asp-for="Username"  placeholder="Username" class="form-control" required/><br />
+    <label >Password</label>
+    <input type="password" asp-for="Password"  placeholder="Password" class="form-control" required /><br />
+    <input type="submit" value="Sign Up" class="btn btn-primary" /> 
+    <br /><small>We dont share your information.</small>
+</form>
