@@ -1,0 +1,15 @@
+@model Basic.Models.Users
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<form asp-controller="User" asp-action="Design" method="post">
+
+    <label>Email Adress</label>
+    <input type="text" asp-for="Email"  placeholder="Email Adress" class="form-control" required/><br />
+    <label >Username</label>
+    <input type="text" asp-for="Username"  placeholder="Username" class="form-control" required/><br />
+    <label >Password</label>
+    <input type="password" asp-for="Password"  placeholder="Password" class="form-control" required /><br />
+    <input type="submit" value="Design" class="btn btn-secondary" />
+    <br /><small>You can't cahange your id number</small>
+</form>
