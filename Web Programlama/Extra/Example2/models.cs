@@ -6,7 +6,6 @@ public class Model
     public string Name { get; set; } = string.Empty;
     public string Surname { get; set; } = string.Empty;
 }
-
 /*
 Model ( Veri ve iş mantığı katmanı)
 Model, uygulamadaki verileri temsil eden katmandır. 
