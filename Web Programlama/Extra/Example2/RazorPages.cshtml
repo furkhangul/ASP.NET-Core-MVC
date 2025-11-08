@@ -1,0 +1,26 @@
+<!-- 
+Razor Pages MVC'nin daha sade versiyondur.
+Ama controller yoktur. Yani her sayfanın kendi kodu vardır.
+
+Sayfa odaklı geliştirilmesini sağlar.
+View ile backend birlikte çalışır
+Küçük projelerde daha pratiktir.--
+index.cshtml ve index.cshtml.cs adında iki dosya ile oluşturulur.
+-->
+
+<!--Index.cshtml-->
+@page
+@model IndexModel
+<p>@Model.Message</p>
+
+<!--Index.cshtml.cs-->
+
+public class IndexModel : PageModel
+{
+    public string Message { get; set; }
+
+    public void OnGet()
+    {
+        Message = "Merhaba Razor Pages!";
+    }
+}
