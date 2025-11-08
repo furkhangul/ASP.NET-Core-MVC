@@ -1,0 +1,16 @@
+@using Basic.Controllers
+
+@{
+    User ekle = (User)ViewBag.User;
+}
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+        <tr>
+            <th>@ekle.Id</th>
+            <th>@ekle.Name</th>
+        </tr>
+    }
+</table>
