@@ -8,7 +8,8 @@ public class Model
 }
 
 /*
-Models uygulamadaki verileri temsil eden katmandır. 
+Model ( Veri ve iş mantığı katmanı)
+Model, uygulamadaki verileri temsil eden katmandır. 
 Veri tabanı tablosu, kullanıcıdan alınan bilgileri, iş kuralları vb. burada bulunur.
 Genelde classlar şeklinde tanımlanır.
 Veri doğrulama gibi kurallar içerir.
