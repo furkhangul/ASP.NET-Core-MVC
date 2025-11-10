@@ -6,5 +6,4 @@ Example4
         aciton kodları ve bu actiona ait view içerisinde istene işlemi yapan kodu yazınız.
 
         Not: Liste sayfasında kullanıcı idsi ve adı, Detay sayfasında ise diğer bilgiler listelenecektir.
-
         Not2: Yazılan tüm kodlar TagHelper kullanılarak yazılacaktır.
