@@ -1,0 +1,19 @@
+@model List<Basic.Models.UserModel>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var user in Model){
+            <tr>
+                <td scope="col">@user.Id</td>
+                <td scope="col">@user.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
