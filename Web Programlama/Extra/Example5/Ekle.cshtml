@@ -1,0 +1,9 @@
+@using Basic.Helpers
+@model Basic.Models.UserModel
+
+@using (Html.BeginForm("Ekle","Home",FormMethod.Post)){
+    @Html.TextBox("Id",null);
+    @Html.TextBox("Name",null)
+
+    <input type="submit" value="Add" class="btn btn-primary" />
+}
