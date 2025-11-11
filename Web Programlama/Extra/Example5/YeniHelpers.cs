@@ -11,7 +11,6 @@ namespace Basic.Helpers
             {
                 @class = "form-control"
             });
-        }
-        
+        }    
     }
 }
