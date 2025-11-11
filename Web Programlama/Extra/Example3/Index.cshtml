@@ -1,0 +1,36 @@
+@model Basic.Models.Product
+<h1>Model ile veri gönderimi</h1>
+<ul>
+    <li>@Model.Id</li>
+    <li>@Model.Name</li>
+</ul>
+
+
+<h1>ViewBag ile veri gönderimi</h1>
+@{
+    var kullan = (Product)ViewBag.Product;
+}
+<ul>
+    <li>@kullan.Id</li>
+    <li>@kullan.Name</li>
+</ul>
+
+
+<h1>ViewData ile veri gönderimi</h1>
+@{
+    var bilgi = (Product)ViewData["user"];
+}
+<ul>
+    <li>@bilgi.Id</li>
+    <li>@bilgi.Name</li>
+</ul>
+
+
+<h1>TempData ile veri gönderimi</h1>
+@{
+    var info = (Product)TempData["user"];
+}
+<ul>
+    <li>@info.Id</li>
+    <li>@info.Name</li>
+</ul>
