@@ -1,0 +1,26 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Project.Models.Data
+
+<link href="~/wwwroot/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+<form asp-controller="Home" asp-action="Ekle" method="post">
+    <div class="container p-5">
+        <input type="text" class="form-control m-1" asp-for="@Model.Id" placeholder="ID" />
+        <span asp-validation-for=@Model.Id></span>
+        <input type="text" class="form-control m-1" asp-for="@Model.Username" placeholder="Kullancı Adı" />
+        <span asp-validation-for=@Model.Username></span>
+        <input type="email" class="form-control m-1" asp-for="@Model.Email" placeholder="E-mail Adresi" />
+        <span asp-validation-for=@Model.Email></span>
+        <input type="password" class="form-control m-1" asp-for="@Model.Password" placeholder="Şifre" />
+        <span asp-validation-for=@Model.Password></span>
+        <input type="submit" class="btn btn-primary m-1" value="Ekle" />
+    </div>
+</form>
+
+
+@{
+    if(ViewBag.Message != null || ViewBag.Message != "")
+    {
+        <p class="text-center  bg-secondary text-dark"> @ViewBag.Message</p>
+    }
+}
