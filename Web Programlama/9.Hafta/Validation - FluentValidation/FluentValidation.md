@@ -7,4 +7,4 @@ Fluent Validation
     Metadata'dan daha kolay ve anlaşılırdır. Bir çok buna benzer kütüphane mevcuttur. Fakat en popülerlerinden biri bu kütüphanedir.
 
     Kütüphaneyi yüklemek için projeye sağ tıklayıp "NuGet Paket Yönetimi" seçeneğine basıyoruz. 
-    Ardından arama kısmına "FluentValidation" şeklinde yazdığımızda gerekli kütüphaneyi yükleme işlemini gerçekleştiriyoruz.
+    Ardından arama kısmına "FluentValidation" şeklinde yazdığımızda  "FluentValidation Asp.Net Core" şeklinde çıkan kütüphaneyi seçtikten sonra gerekli kütüphaneyi        yükleme işlemini gerçekleştiriyoruz.
