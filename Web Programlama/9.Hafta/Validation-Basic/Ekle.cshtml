@@ -1,0 +1,24 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Basic.Models.Data
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<h1 class="text-center p-3 m-2 text-secondary">User Add Page</h1>
+
+
+<form asp-controller="Home" asp-action="Ekle" method="post">
+       <div class="container p-5">
+        <input type="text" class="form-control m-1" asp-for="@Model.Id" placeholder="ID" />
+        <span asp-validation-for="@Model.Id"></span>
+        <input type="text" class="form-control m-1" asp-for="@Model.Username" placeholder="Username" />
+        <span asp-validation-for="@Model.Username"></span>
+        <input type="email" class="form-control m-1" asp-for="@Model.Email" placeholder="E-mail Adress" />
+        <span asp-validation-for="@Model.Email"></span>
+        <input type="password" class="form-control m-1" asp-for="@Model.Password" placeholder="Password" />
+        <span asp-validation-for="@Model.Password"></span><br />
+        <input type="submit" class="btn btn-primary m-1" value="Add" />
+       </div>
+</form>
+
+@if(ViewBag!=null || ViewBag !=""){<p class="text-warning text-center">@ViewBag.Message</p>}
