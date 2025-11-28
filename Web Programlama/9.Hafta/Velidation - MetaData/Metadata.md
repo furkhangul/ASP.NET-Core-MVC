@@ -6,4 +6,4 @@ MetaData Kullanım amacı
       MetaData Dışında FluentValidation ile de bu işlemler gerçekleştirilebilir.
       Gözden kaçırılmaması gereken nokta ise ana modelimizin üzerinde MetaDatayı tanımlamamız gerekmektedir.
 
-      [MetadataType(TypeOf(Sınıf_adı)] şeklinde sınıfın önüne getirilmesi gerekmektedir.
+      [MetadataType(TypeOf(Sınıf_adı))] şeklinde sınıfın önüne getirilmesi gerekmektedir.
