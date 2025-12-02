@@ -1,0 +1,14 @@
+﻿@model Data 
+
+
+<form asp-action="Ekle" asp-controller="Home" method="post">
+    <input type="text" placeholder="Kullanıcı ID" asp-for="Id"/> <br />
+    <input type ="text" placeholder="Kullanıcı Adı" asp-for="Name"/> <br />
+    <input type="text" placeholder="Kullanıcı Soyadı" asp-for="Surname" /> <br />
+    <input type="submit" value="Ekle" />
+</form>
+
+@if(ViewBag.User != null || ViewBag.User !="")
+{
+    <h3>@ViewBag.User</h3>
+}
