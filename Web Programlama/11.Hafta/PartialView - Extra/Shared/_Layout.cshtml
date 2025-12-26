@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<body>
+    @*Html.Partial("~/Views/Shared/_headPartial.cshtml")*@
+    <parital name="~/Views/Shared/_headPartial.cshtml" />
+    @*Html.Partial("~/Views/Shared/_headerPartial.cshtml")*@
+    <partial name="~/Views/Shared/_headerPartial.cshtml" />
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @*Html.Partial("~/Views/Shared/_footerPartial.cshtml")*@
+    <partial name="~/Views/Shared/_footerPartial.cshtml" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
