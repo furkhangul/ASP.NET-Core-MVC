@@ -1,0 +1,25 @@
+﻿@model List<FurOfTheWeak.Models.PostDatum>
+<div class="display-6 text-center w-100 m-2 p-2">Post List</div>
+<center>
+<a asp-controller="Post" asp-action="Add" class="btn btn-secondary w-25">Add Post</a>
+</center>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Post ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">User by</th>
+        </tr>
+    </thead>
+    @foreach (var post in Model)
+    {
+        <tbody>
+            <tr>
+                <th scope="row">@post.Id</th>
+                <td>@post.PostDate</td>
+                <td>@post.Id</td>
+                <td><a asp-route-id="@post.Id" asp-controller="Post" asp-action="Edit">Edit</a> | <a asp-route-id="@post.Id" asp-controller="Post" asp-action="Delete">Delete</a> </td>
+            </tr>
+        </tbody>
+    }
+</table>

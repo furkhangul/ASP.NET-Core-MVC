@@ -1,0 +1,31 @@
+﻿@model List<FurOfTheWeak.Models.UserDatum>
+<div class="display-6 text-center w-100 m-2 p-2">User List</div>
+
+
+<center>
+    <a asp-controller="User" asp-action="Add" class="btn btn-secondary w-25">Add User</a>
+</center>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Settings</th>
+        </tr>
+    </thead>
+    @foreach(var user in Model)
+    {
+        <tbody>
+            <tr>
+                <th scope="row">@user.Id</th>
+                <td>@user.Username</td>
+                <td>@user.Email</td>
+                <td>@user.Pass</td>
+                <td><a asp-route-id="@user.Id" asp-controller="User" asp-action="Edit">Edit</a> | <a asp-route-id="@user.Id" asp-controller="User" asp-action="Delete">Delete</a> </td>
+            </tr>
+        </tbody>
+    }
+</table>
