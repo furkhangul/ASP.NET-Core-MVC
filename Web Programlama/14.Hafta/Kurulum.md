@@ -9,8 +9,9 @@ Paket Yükleme:
       Kurulumlar sağlandıktan hemen sonra yukarıdaki menüden "Package MAanger Console" yani paket yönetim 
       konsolunu açıp gerekli kodları girmemiz gerekiyyor.
 
-      -Scaffold-DbContext "Server=localhost;Database=Northwind;Trusted_Connection=True;TrustServerCertificate=True"
-      Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir DbContext -force
+Scaffold-DbContext "Server=.\SQLEXPRESS;Database=FurOfTheWeak;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -ContextDir DbContext -Force
+
+ 
 
 
       Server = {} -> kısmı Microsoft SQL Server'daki yolu temsil ediyor. Yani hangi server üzerine işlem yapılacağını
