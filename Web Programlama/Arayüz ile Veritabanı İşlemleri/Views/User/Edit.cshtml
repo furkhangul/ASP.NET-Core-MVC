@@ -1,0 +1,29 @@
+﻿@model Data
+
+<div class="m-5">
+    <div class="container-sm">
+        <form asp-action="Edit" asp-controller="User" method="post">
+            <div class="input-group flex-nowrap mb-3">
+                <span class="input-group-text" id="addon-wrapping">@@</span>
+                <input type="text" asp-for="@Model.Username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">First and last name</span>
+                <input type="text" asp-for="@Model.Name" aria-label="First name" class="form-control">
+                <input type="text" asp-for="@Model.Surname" aria-label="Last name" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <input type="date" asp-for="@Model.Birthday" class="form-control">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" asp-for="@Model.Email" class="form-control" placeholder="Email Address" aria-label="Email">
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" asp-for="@Model.Password" class="form-control" placeholder="Password">
+            </div>
+            <center>
+                <input type="submit" value="Edit" class="form-control btn btn-primary" />
+            </center>
+        </form>
+    </div>
+</div>
